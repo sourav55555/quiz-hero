@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+</head>
+<body>
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+          <div class="text-zinc-800 font-bold uppercase">
+            <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+            <p class="text-[10px] font-normal capitalize -mt-1">
+              Get ready to Quiz and be amazed!
+            </p>
+          </div>
+          <button
+            class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+          >
+            <a href="blog.html">Blog</a>
+          </button>
+        </nav>
+      </header>
+    <div class="container flex justify-center items-center mx-auto my-8 flex-col">
+        <div class="my-12 max-w-5xl">
+            <div class="border rounded-md p-6">
+                <p class="border-b-2 p-4 font-semibold bg-slate-300 rounded-md">What is the difference between Map, Filter, forEach, find ?</p>
+                <p class="p-4">
+                    map() & forEach() each are used to execute same code on every element but map() returns a new array with update elements, forEach() doesn't change the array and returns undefined.<br>
+                    filter() & find() check every element of the array if it meets a certain condition than, filter() returns an array of matching elements but find() return only the first element. 
+                </p>
+            </div>
+            <div class="border rounded-md p-6">
+                <p class="border-b-2 p-4 font-semibold bg-slate-300 rounded-md">What is the difference between Local-storage, session storage, Cookies ?</p>
+                <p class="p-4">
+                    Local-storage data can be deleted via JavaScript or manually, Session data will deleted if the browser or tab is closed, Cookies data can be set to expire at a certain time.<br>
+                    Local storage is good for storing data that the user will need to access later, Session storage is good for store sensitive data, Cookies are good for storing data that should not be persisted for a long time. 
+                </p>
+            </div>
+            <div class="border rounded-md p-6">
+                <p class="border-b-2 p-4 font-semibold bg-slate-300 rounded-md">What is event loop & how does event loop work?</p>
+                <p class="p-4">
+                    JavaScript executes all it's operations on a single thread called synchronous programming. But with the event loop JavaScript can perform asynchronous programming.<br><br>
+                    The call stack is keeping track of all operations in the line to be execute. If function is finished, it is popped from the stack.<br>
+                    The event queue send new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.<br>
+                    Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts it's own single-threaded operation.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
