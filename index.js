@@ -12,7 +12,6 @@ let submitContainer = document.querySelector("#submitContainer");
 let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
-
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
   let countDown = document.querySelector("#countDownContainer");
@@ -46,13 +45,14 @@ startQuiz.addEventListener("click", () => {
 // All quiz data fetched from json
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
-  const data = await res.json;
+  const data = await res.json();
   quizData = data;
-  displayQuiz(data);
+  displayQuiz(quizData);
 };
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
+  console.log("disp-quiz",data);
   if (!data) {
     quizContainer.innerHTML = "";
     return;
